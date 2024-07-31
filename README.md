@@ -10,7 +10,7 @@ Para instalar y ejecutar este proyecto en tu entorno local, sigue estos pasos:
 
     ```bash
     git clone https://github.com/EduarM70/Farmacia-Insumos-Java
-    cd java-supplies
+    cd Farmacia-Insumos-Java
     ```
 
 2. **Configuración de los Servidores**
@@ -36,6 +36,10 @@ Para instalar y ejecutar este proyecto en tu entorno local, sigue estos pasos:
 - Payara Server
 - Tomcat Server
 - Bootstrap
+
+## Imagenes demostrativas
+
+## Enlace del Video de Funcionalidad
 
 ## Contribuciones
 
