@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: marti
+  Date: 29/7/2024
+  Time: 09:17
+-->
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+    <title>Index JSF</title>
+    <h:outputStylesheet library="webjars" name="bootstrap/5.1.3/css/bootstrap.min.css"/>
+
+</h:head>
+<h:body styleClass="d-flex flex-column min-vh-100 justify-content-center align-items-center bg-light">
+    <div class="p-4 rounded-3">
+        <h1 class="mb-4 display-3 text-black">Pharmacy store</h1>
+        <h2 class="display-6 text-body-secondary mb-4">Bienvenido a nuestra tienda de insumos médicos</h2>
+        <p class="lead mb-4">Utiliza nuestra REST Web Service consumida por una Web Application con JSF</p>
+        <div>
+            <h:form>
+                <h:commandButton value="Ver tienda"
+                                 styleClass="btn btn-success btn-lg me-3" action="menu?faces-redirect=true"/>
+                <h:commandButton value="Documentación API Rest"
+                                 class="btn btn-secondary btn-lg" action="documentacion?faces-redirect=true"/>
+            </h:form>
+        </div>
+    </div>
+</h:body>
+
+</html>

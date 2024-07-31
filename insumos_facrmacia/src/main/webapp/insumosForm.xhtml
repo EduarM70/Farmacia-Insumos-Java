@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: marti
+  Date: 29/7/2024
+  Time: 19:59
+-->
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+    <title>Agregar insumos - Pharmacy store</title>
+    <h:outputStylesheet library="webjars" name="bootstrap/5.1.3/css/bootstrap.min.css"/>
+</h:head>
+
+<h:body styleClass="container">
+    <div class="p-4">
+        <h3 class="display-5 mt-4">Agregar nuevo insumo médico</h3>
+        <p class="lead pb-2">Completa el siguiente campo con los datos correctos</p>
+        <h:form>
+            <h:panelGroup rendered="#{insumosBean.updating}">
+                <div class="mb-3">
+                    <h:outputLabel for="id_insumo" value="Código del insumo" styleClass="form-label" />
+                    <h:inputText id="id_insumo" styleClass="form-control" value="#{insumosBean.insumo.id}" required="true" />
+                    <h:message for="id_insumo" styleClass="text-danger"/>
+                </div>
+            </h:panelGroup>
+            <div class="mb-3">
+                <h:outputLabel for="nombre" value="Nombre Insumo" styleClass="form-label" />
+                <h:inputText id="nombre" styleClass="form-control" value="#{insumosBean.insumo.nombre}" required="true" />
+                <h:message for="nombre" styleClass="text-danger"/>
+            </div>
+
+            <div class="mb-3">
+                <h:outputLabel for="descripcion" value="Descripción" styleClass="form-label" />
+                <h:inputTextarea id="descripcion" title="Alguna descripción" styleClass="form-control" value="#{insumosBean.insumo.descripcion}"/>
+                <h:message for="descripcion" styleClass="text-danger"/>
+            </div>
+
+            <div class="mb-3">
+                <h:outputLabel for="cantidad" value="Cantidad" styleClass="form-label" />
+                <h:inputText id="cantidad" value="#{insumosBean.insumo.cantidad}" required="true" class="form-control">
+                    <f:validateLongRange minimum="1"/>
+                </h:inputText>
+                <h:message for="cantidad" styleClass="text-danger"/>
+            </div>
+
+            <div class="mb-3">
+                <h:outputLabel for="precio" value="Precio" styleClass="form-label" />
+                <h:inputText id="precio" value="#{insumosBean.insumo.precio}" required="true" class="form-control">
+                    <f:validateDoubleRange minimum="0.01"/>
+                </h:inputText>
+                <h:message for="precio" styleClass="text-danger"/>
+            </div>
+            <div class="mb-3">
+                <h:outputLabel for="categoriaId" value="Categoria" styleClass="form-label" />
+                <h:selectOneMenu id="categoriaId" styleClass="form-select" value="#{insumosBean.insumo.categoriaId}">
+                    <f:selectItems value="#{categoriasBean.categorias}" var="categoria" itemValue="#{categoria.id}" itemLabel="#{categoria.nombre}"/>
+                </h:selectOneMenu>
+                <h:message for="categoriaId" styleClass="text-danger"/>
+            </div>
+            <!--
+            <div class="mb-3">
+                <h:outputLabel for="fecha_vencimiento" value="Fecha de vencimiento" styleClass="form-label"  />
+                <p:calendar id="fecha_vencimiento" type="date" styleClass="form-control" value="#{insumosBean.insumo.fecha_vencimiento}"/>
+                <input id="fecha_vencimiento" type="date" class="form-control" value="#{insumosBean.insumo.fecha_vencimiento}"/>
+                <h:message for="fecha_vencimiento" styleClass="text-danger"/>
+            </div>-->
+
+            <h:commandButton styleClass="btn btn-success mt-4 w-100 text-uppercase" value="#{insumosBean.updating ? 'Actualizar' : 'Agregar'}" action="#{insumosBean.crearInsumo()}" />
+            <h:commandLink styleClass="btn btn-secondary mt-2 w-100 text-uppercase" value="Regresar a la lista" action="#{insumosBean.regresarLista()}" immediate="true"/>
+        </h:form>
+    </div>
+
+</h:body>
+
+</html>
