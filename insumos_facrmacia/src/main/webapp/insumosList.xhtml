@@ -41,7 +41,7 @@
                             <div class="card-body">
                                 <h5 class="card-title"><h:outputText value="#{insumo.nombre}" /></h5>
                                 <p class="card-text"><h:outputText value="#{insumo.descripcion}" /></p>
-                                <p class="card-text"><span class="fw-bold">Precio: </span><h:outputText value="#{insumo.precio}" /></p>
+                                <p class="card-text"><span class="fw-bold">Precio: $</span><h:outputText value="#{insumo.precio}" /></p>
                                 <p class="card-text"><span class="fw-bold">Existencia: </span><h:outputText value="#{insumo.cantidad}" /></p>
                                 <h:commandButton action="#{insumosBean.goFormEditing(insumo.id)}" value="Editar" styleClass="btn btn-primary me-2" />
                                 <h:commandButton action="#{insumosBean.eliminarInsumo(insumo.id)}" value="Eliminar" styleClass="btn btn-danger" onclick="return confirm('Seguro que deseas eliminar este medicamento?');" />
