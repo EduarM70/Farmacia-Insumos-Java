@@ -9,38 +9,37 @@ Para instalar y ejecutar este proyecto en tu entorno local, sigue estos pasos:
 1. **Clonar el Repositorio**
 
     ```bash
-    git clone https://github.com/Javithor360/java-supplies
-    cd java-supplies
+    git clone https://github.com/EduarM70/Farmacia-Insumos-Java
+    cd Farmacia-Insumos-Java
     ```
 
-2. **Configurar el Servidor**
+2. **Configuración de los Servidores**
 
-    - Asegúrate de tener Payara 5.2022 instalado y configurado.
-    - Despliega la aplicación en el servidor Payara.
+    - Asegúrate de tener Payara 6.17.0 y Tomcat 10.1.20 instalado y configurado.
+    - Recuerda configurar ambos servidores en diferentes puertos, para evitar conflictos
 
 3. **Configurar la Base de Datos**
 
-    - Configura tu base de datos en el archivo `AppConnection.java` con las credenciales correctas.
+    - Crea la base de datos en tu proveedor de MySQL, con el nombre de `farmacia_dwf` e importa el archivo que aparece dentro del repositorio `db_famarcia.sql`
+    - Configura tu base de datos en el archivo `Connection.java` con las credenciales correspondientes
 
-4. **Ejecutar la Aplicación**
+4. **Ejecutar el Servidor WS y la Aplicación Cliente**
 
-    - Inicia el servidor Payara.
-    - Accede a la aplicación desde [http://localhost:8080/insumos-1.0-SNAPSHOT/faces/index.xhtml](http://localhost:8080/insumos-1.0-SNAPSHOT/faces/index.xhtml).
+    - Inicia el servidor Payara para la aplicación Cliente e inicia el Servidor de Tomcat para el Web Service Rest.
+    - Accede a la aplicación desde [http://localhost:8080/insumos-1.0-SNAPSHOT/faces/categoriasApi.xhtml](http://localhost:8080/insumos-1.0-SNAPSHOT/faces/categoriasApi.xhtml). 
 
-## Observaciones
-
-- **Idioma**: El proyecto está programado y presentado en inglés por motivos de futura difusión y estándares generales.
-- **Validaciones**: La aplicación incluye validaciones de formularios para asegurar la integridad de los datos.
-- **Estilos**: Todos los formularios y tablas están estilizados utilizando Bootstrap a través de su CDN.
-- **Integración**: La aplicación se integra con la base de datos MySQL para almacenar y recuperar los datos.
-- **Web Service**: La aplicación consume un REST Web Service interno para obtener la información.
 
 ## Tecnologías Utilizadas
 
 - Java
 - MySQL
 - Payara Server
+- Tomcat Server
 - Bootstrap
+
+## Imagenes demostrativas
+
+## Enlace del Video de Funcionalidad
 
 ## Contribuciones
 
