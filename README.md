@@ -39,7 +39,9 @@ Para instalar y ejecutar este proyecto en tu entorno local, sigue estos pasos:
 
 ## Enlace del Video de Funcionalidad
 
-[![Video demostrativo](Recursos/demostracion.png)]([https://www.youtube.com/watch?v=ID_DEL_VIDEO](https://youtu.be/P_t14aB0rCE))
+[![Video demostrativo](Recursos/demostracion.png)]([https://youtu.be/P_t14aB0rCE)
+
+- Accede al video desde [https://youtu.be/P_t14aB0rCE](https://youtu.be/P_t14aB0rCE). 
 
 ## Contribuciones
 
