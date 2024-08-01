@@ -37,9 +37,11 @@ Para instalar y ejecutar este proyecto en tu entorno local, sigue estos pasos:
 - Tomcat Server
 - Bootstrap
 
-## Imagenes demostrativas
-
 ## Enlace del Video de Funcionalidad
+
+[![Video demostrativo](Recursos/demostracion.png)]([https://youtu.be/P_t14aB0rCE)
+
+- Accede al video desde [https://youtu.be/P_t14aB0rCE](https://youtu.be/P_t14aB0rCE). 
 
 ## Contribuciones
 
